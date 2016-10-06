@@ -20,6 +20,6 @@ You can evaluate our methods with different settings in terms of the size of dim
 Parameter|Description|Default
 ---|---
 -h, --help|show this help message|{}
--c <bool>, --do_preprocess <bool>|preprocess raw data for ConvMF|False
+-c `<bool>`, --do_preprocess `<bool>`|preprocess raw data for ConvMF|False
 -r, --raw_rating
 
