@@ -13,7 +13,7 @@ _**Donghyun Kim**_, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 
 
 ###Quick Start Guide
-----
+--
 Run `python <install_path>/run.py -h`
 
 
