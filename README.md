@@ -22,5 +22,22 @@ Parameter | Default
 ---       | ---
 `-h`, `--help` | {}
 `-c <bool>`, `--do_preprocess <bool>` | `False`
-`-r <path>`, `--raw_rating <path>` | {}
+`-r <path>`, `--raw_rating_data_path <path>` | {}
+`-i <path>`, `--raw_item_document_data_path <path>`| {}
+`-m <integer>`, `--min_rating <integer>` | {}
+`-l <integer>`, `--max_length_document <integer>` | 300
+`-f <float>`, `--max_df <float>` | 0.5
+`-s <integer>`, `--vocab_size <integer>` | 8000
+`-t <float>`, `--split_ratio <float>` | 0.2
+`-d <path>`, `--data_path <path>` | {}
+`-a <path>`, `--aux_path <path>` | {}
+`-o <path>`, `--res_dir <path>` | {}
+`-e <integer>`, `--emb_dim <integer>` | 200
+`-p <path>`, `--pretrain_w2v <path>` | {}
+`-k <integer>`, `--dimension <integer>` | 50
+`-u <float>`, `--lambda_u <float>` | {}
+`-v <float>`, `--lambda_v <float>` | {}
+`-n <integer>`, `--max_iter <integer>` | 200
+`-w <integer>`, `--num_kernel_per_ws` | 100
+
 
