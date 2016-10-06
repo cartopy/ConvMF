@@ -16,7 +16,7 @@ _**Donghyun Kim**_, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 Note: Run `python <install_path>/run.py -h` in bash shell. You will see how to configure several parameters for ConvMF
 
 ###Configuration
-You can evaluate our methods with different settings in terms of the size of dimension, the value of hyperparameter, the number of convolutional kernal, and etc. Below is descriptions of all the configurable parameters and their defaults:
+You can evaluate our model with different settings in terms of the size of dimension, the value of hyperparameter, the number of convolutional kernal, and etc. Below is a description of all the configurable parameters and their defaults:
 
 Parameter | Default
 ---       | ---
