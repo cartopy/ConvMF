@@ -11,9 +11,15 @@ _**Donghyun Kim**_, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 - Keras 0.3.3
  - [See installation instructions] (https://github.com/cartopy/keras-0.3.3)
 
-###Quick Start Guide
+###How to Run
 
 Note: Run `python <install_path>/run.py -h` in bash shell. You will see how to configure several parameters for ConvMF
 
-
+###Configuration
+You can evaluate our methods with different settings in terms of the size of dimension, the value of hyperparameter, the number of convolutional kernal, and etc. Below is descriptions of all the configurable parameters and their defaults:
+Parameter|Description|Default
+---|---
+-h, --help|show this help message|{}
+-c <bool>, --do_preprocess <bool>|preprocess raw data for ConvMF|False
+-r, --raw_rating
 
