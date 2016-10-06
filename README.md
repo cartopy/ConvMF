@@ -12,7 +12,7 @@ _**Donghyun Kim**_, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
  - [See installation instructions] (https://github.com/cartopy/keras-0.3.3)
 
 ###Quick Start Guide
----
+
 Run `python <install_path>/run.py -h`
 
 
