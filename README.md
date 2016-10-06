@@ -1,4 +1,6 @@
-##Convolutional Matrix Factorization for Document Context-Aware Recommendation
+##Convolutional Matrix Factorization
+for Document Context-Aware Recommendation
+
 _**Donghyun Kim**_, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 
 ####Abstract
