@@ -86,7 +86,7 @@ def ConvMF(res_dir, train_user, train_item, valid_user, test_user,
         seed = np.random.randint(100000)
         history = cnn_module.train(CNN_X, V, seed)
         theta = cnn_module.get_projection_layer(CNN_X)
-        cnn_loss = history.history['val_loss'][-1]
+        cnn_loss = history.history['loss'][-1]
 
         loss = loss - 0.5 * lambda_v * cnn_loss * num_item
 
