@@ -8,13 +8,13 @@ import os
 import time
 
 from util import eval_RMSE
-
+import math
 import numpy as np
 from text_analysis.models import CNN_module
 
 
 def ConvMF(res_dir, train_user, train_item, valid_user, test_user,
-           R, CNN_X, vocab_size, init_W=None,
+           R, CNN_X, vocab_size, init_W=None, give_item_weight=True,
            max_iter=50, lambda_u=1, lambda_v=100, dimension=50,
            dropout_rate=0.2, emb_dim=200, max_len=300, num_kernel_per_ws=100):
     # explicit setting
@@ -32,6 +32,13 @@ def ConvMF(res_dir, train_user, train_item, valid_user, test_user,
     Train_R_J = train_item[1]
     Test_R = test_user[1]
     Valid_R = valid_user[1]
+
+    if give_item_weight is True:
+        item_weight = np.array([math.sqrt(len(i))
+                                for i in Train_R_J], dtype=float)
+        item_weight = (float(num_item) / item_weight.sum()) * item_weight
+    else:
+        item_weight = np.ones(num_item, dtype=float)
 
     pre_val_eval = 1e10
 
@@ -73,9 +80,9 @@ def ConvMF(res_dir, train_user, train_item, valid_user, test_user,
             R_j = Train_R_J[j]
 
             tmp_A = UU + (a - b) * (U_j.T.dot(U_j))
-            A = tmp_A + lambda_v * np.eye(dimension)
+            A = tmp_A + lambda_v * item_weight[j] * np.eye(dimension)
             B = (a * U_j * (np.tile(R_j, (dimension, 1)).T)
-                 ).sum(0) + lambda_v * theta[j]
+                 ).sum(0) + lambda_v * item_weight[j] * theta[j]
             V[j] = np.linalg.solve(A, B)
 
             sub_loss[j] = -0.5 * np.square(R_j * a).sum()
@@ -84,9 +91,9 @@ def ConvMF(res_dir, train_user, train_item, valid_user, test_user,
 
         loss = loss + np.sum(sub_loss)
         seed = np.random.randint(100000)
-        history = cnn_module.train(CNN_X, V, seed)
+        history = cnn_module.train(CNN_X, V, item_weight, seed)
         theta = cnn_module.get_projection_layer(CNN_X)
-        cnn_loss = history.history['val_loss'][-1]
+        cnn_loss = history.history['loss'][-1]
 
         loss = loss - 0.5 * lambda_v * cnn_loss * num_item
 

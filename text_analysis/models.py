@@ -110,21 +110,23 @@ class CNN_module():
         self.qual_model.compile(
             'rmsprop', {'output_3': 'mse', 'output_4': 'mse', 'output_5': 'mse'})
 
-    def train(self, X_train, V, seed):
+    def train(self, X_train, V, item_weight, seed):
         X_train = sequence.pad_sequences(X_train, maxlen=self.max_len)
         np.random.seed(seed)
         X_train = np.random.permutation(X_train)
         np.random.seed(seed)
         V = np.random.permutation(V)
+        np.random.seed(seed)
+        item_weight = np.random.permutation(item_weight)
 
         print("Train...CNN module")
         history = self.model.fit({'input': X_train, 'output': V},
-                                 verbose=0, batch_size=self.batch_size, nb_epoch=self.nb_epoch, shuffle=True, validation_split=0.1, callbacks=[EarlyStopping(monitor='val_loss', patience=0)])
+                                 verbose=0, batch_size=self.batch_size, nb_epoch=self.nb_epoch, sample_weight={'output': item_weight})
 
-        cnn_loss_his = history.history['loss']
-        cmp_cnn_loss = sorted(cnn_loss_his)[::-1]
-        if cnn_loss_his != cmp_cnn_loss:
-            self.nb_epoch = 1
+        # cnn_loss_his = history.history['loss']
+        # cmp_cnn_loss = sorted(cnn_loss_his)[::-1]
+        # if cnn_loss_his != cmp_cnn_loss:
+        #     self.nb_epoch = 1
         return history
 
     def get_projection_layer(self, X_train):

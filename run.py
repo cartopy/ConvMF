@@ -39,6 +39,8 @@ parser.add_argument("-e", "--emb_dim", type=int,
                     help="Size of latent dimension for word vectors (default: 200)", default=200)
 parser.add_argument("-p", "--pretrain_w2v", type=str,
                     help="Path to pretrain word embedding model  to initialize word vectors")
+parser.add_argument("-g", "--give_item_weight", type=bool,
+                    help="True or False to give item weight of ConvMF (default = False)", default=True)
 parser.add_argument("-k", "--dimension", type=int,
                     help="Size of latent dimension for users and items (default: 50)", default=50)
 parser.add_argument("-u", "--lambda_u", type=float,
@@ -93,6 +95,7 @@ else:
     lambda_v = args.lambda_v
     max_iter = args.max_iter
     num_kernel_per_ws = args.num_kernel_per_ws
+    give_item_weight = args.give_item_weight
 
     if res_dir is None:
         sys.exit("Argument missing - res_dir is required")
@@ -128,6 +131,5 @@ else:
     test_user = data_factory.read_rating(data_path + '/test_user.dat')
 
     ConvMF(max_iter=max_iter, res_dir=res_dir,
-           lambda_u=lambda_u, lambda_v=lambda_v, dimension=dimension, vocab_size=vocab_size, init_W=init_W,
-           CNN_X=CNN_X, emb_dim=emb_dim, num_kernel_per_ws=num_kernel_per_ws,
+           lambda_u=lambda_u, lambda_v=lambda_v, dimension=dimension, vocab_size=vocab_size, init_W=init_W, give_item_weight=give_item_weight, CNN_X=CNN_X, emb_dim=emb_dim, num_kernel_per_ws=num_kernel_per_ws,
            train_user=train_user, train_item=train_item, valid_user=valid_user, test_user=test_user, R=R)
