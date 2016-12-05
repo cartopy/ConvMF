@@ -34,6 +34,7 @@ Parameter | Default
 `-o <path>`, `--res_dir <path>` | {}
 `-e <integer>`, `--emb_dim <integer>` | 200
 `-p <path>`, `--pretrain_w2v <path>` | {}
+`-g <bool>`, `--give_item_weight <bool>` | 'True'
 `-k <integer>`, `--dimension <integer>` | 50
 `-u <float>`, `--lambda_u <float>` | {}
 `-v <float>`, `--lambda_v <float>` | {}
@@ -52,9 +53,10 @@ Parameter | Default
 10. `res_dir`: path to ConvMF's result
 11. `emb_dim`: the size of latent dimension for word vectors.
 12. `pretrain_w2v`: path to pretrained word embedding model to initialize word vectors.
-13. `dimension`: the size of latent dimension for users and items.
-14. `lambda_u`: parameter of user regularizer.
-15. `lambda_v`: parameter of item regularizer.
-16. `max_iter`: the maximum number of iteration.
-17. `num_kernel_per_ws`: the number of kernels per window size for CNN module.
+13. `give_item_weight` : `True` or `False` to give item weight of ConvMF.
+14. `dimension`: the size of latent dimension for users and items.
+15. `lambda_u`: parameter of user regularizer.
+16. `lambda_v`: parameter of item regularizer.
+17. `max_iter`: the maximum number of iteration.
+18. `num_kernel_per_ws`: the number of kernels per window size for CNN module.
 
