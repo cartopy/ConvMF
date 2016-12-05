@@ -34,7 +34,7 @@ Parameter | Default
 `-o <path>`, `--res_dir <path>` | {}
 `-e <integer>`, `--emb_dim <integer>` | 200
 `-p <path>`, `--pretrain_w2v <path>` | {}
-`-g <bool>`, `--give_item_weight <bool>` | 'True'
+`-g <bool>`, `--give_item_weight <bool>` | `True`
 `-k <integer>`, `--dimension <integer>` | 50
 `-u <float>`, `--lambda_u <float>` | {}
 `-v <float>`, `--lambda_v <float>` | {}
