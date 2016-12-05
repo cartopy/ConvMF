@@ -5,15 +5,15 @@
 
 ###Paper
 - Convolutional Matrix Factorization for Document Context-Aware Recommendation (*RecSys 2016*)
- - [_**Donghyun Kim**_] (http://dm.postech.ac.kr/~cartopy), Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
+ - [_**Donghyun Kim**_] (http://dm.postech.ac.kr/~cartopy){:target="_blank"}, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 - Robust Convolutional Matrix Factorization for Document Context-Aware Recommender Systems (*submitted to Information Sciences*)
- - [_**Donghyun Kim**_] (http://dm.postech.ac.kr/~cartopy), Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
+ - [_**Donghyun Kim**_] (http://dm.postech.ac.kr/~cartopy){:target="_blank"}, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 
 ###Requirements
 
 - Python 2.7
 - Keras 0.3.3
- - [See installation instructions] (https://github.com/cartopy/keras-0.3.3)
+ - [See installation instructions] (https://github.com/cartopy/keras-0.3.3){:target="_blank"}
 
 ###How to Run
 
