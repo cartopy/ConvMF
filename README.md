@@ -53,7 +53,7 @@ Parameter | Default
 10. `res_dir`: path to ConvMF's result
 11. `emb_dim`: the size of latent dimension for word vectors.
 12. `pretrain_w2v`: path to pretrained word embedding model to initialize word vectors.
-13. `give_item_weight` : `True` or `False` to give item weight of ConvMF.
+13. `give_item_weight` : `True` or `False` to give item weight for R-ConvMF.
 14. `dimension`: the size of latent dimension for users and items.
 15. `lambda_u`: parameter of user regularizer.
 16. `lambda_v`: parameter of item regularizer.
