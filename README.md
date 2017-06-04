@@ -1,25 +1,25 @@
-#Convolutional Matrix Factorization (ConvMF)
+# Convolutional Matrix Factorization (ConvMF)
 
-###Overview
+### Overview
 > Sparseness of user-to-item rating data is one of the major factors that deteriorate the quality of recommender system. To handle the sparsity problem, several recommendation techniques have been proposed that additionally consider auxiliary information to improve rating prediction accuracy. In particular, when rating data is sparse, document modeling-based approaches have improved the accuracy by additionally utilizing textual data such as reviews, abstracts, or synopses. However, due to the inherent limitation of the bag-of-words model, they have difficulties in effectively utilizing contextual information of the documents, which leads to shallow understanding of the documents. This paper proposes a novel context-aware recommendation model, convolutional matrix factorization (ConvMF) that integrates convolutional neural network (CNN) into probabilistic matrix factorization (PMF). Consequently, ConvMF captures contextual information of documents and further enhances the rating prediction accuracy.
 
-###Paper
+### Paper
 - Convolutional Matrix Factorization for Document Context-Aware Recommendation (*RecSys 2016*)
  - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
 - Robust Convolutional Matrix Factorization for Document Context-Aware Recommender Systems (*submitted to Information Sciences*)
  - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Hwanjo Yu
 
-###Requirements
+### Requirements
 
 - Python 2.7
 - Keras 0.3.3
  - <a href="https://github.com/cartopy/keras-0.3.3" target="_blank">See installation instructions</a>
 
-###How to Run
+### How to Run
 
 Note: Run `python <install_path>/run.py -h` in bash shell. You will see how to configure several parameters for ConvMF
 
-###Configuration
+### Configuration
 You can evaluate our model with different settings in terms of the size of dimension, the value of hyperparameter, the number of convolutional kernal, and etc. Below is a description of all the configurable parameters and their defaults:
 
 Parameter | Default
