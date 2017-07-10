@@ -5,9 +5,9 @@
 
 ### Paper
 - Convolutional Matrix Factorization for Document Context-Aware Recommendation (*RecSys 2016*)
- - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
-- Robust Convolutional Matrix Factorization for Document Context-Aware Recommender Systems (*submitted to Information Sciences*)
- - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Hwanjo Yu
+  - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Seungyong Lee, Hwanjo Yu
+- Deep Hybrid Recommender Systems via Exploiting Document Context and Statistics of Items (*Information Sciences (SCI)*)
+   - <a href="http://dm.postech.ac.kr/~cartopy" target="_blank">_**Donghyun Kim**_</a>, Chanyoung Park, Jinoh Oh, Hwanjo Yu
 
 ### Requirements
 
